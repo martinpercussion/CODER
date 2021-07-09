@@ -173,8 +173,7 @@ nav a:hover {
 #intro .icon {
     display: flex;
     color: rgb(255, 255, 255);
-    font-size: 35px;
-    justify-content: ;
+    font-size: 35px;    
     width: 0px;
 
 }
@@ -277,8 +276,7 @@ p:hover {
     row-gap: 4px;
 }
 
-.date {
-    background: ;
+.date {    
     color: white;
     height: fit-content;
     width: fit-content;
@@ -288,13 +286,9 @@ p:hover {
     justify-content: center;
     align-items: center;
     font-size: 18px;
-
-
 }
 
-.date .item1 {
-
-    background: ;
+.date .item1 {    
     color: white;
     height: fit-content;
     width: fit-content;
@@ -304,8 +298,6 @@ p:hover {
 }
 
 .date .item2 {
-
-    background: ;
     color: white;
     height: fit-content;
     display: flex;
@@ -320,8 +312,6 @@ p:hover {
 }
 
 .date .item3 {
-
-    background: ;
     color: white;
     height: fit-content;
     display: flex;
@@ -336,8 +326,6 @@ p:hover {
 }
 
 .date .item4 {
-
-    background: ;
     color: white;
     height: fit-content;
     display: flex;
@@ -352,8 +340,7 @@ p:hover {
 
 }
 
-.date .item5 {
-    background: ;
+.date .item5 {    
     color: white;
     height: fit-content;
     display: flex;
