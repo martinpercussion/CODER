@@ -1,0 +1,15 @@
+.bg-navbar {
+    background-color: transparent;
+    display: flex;
+    /* flex-wrap: nowrap;
+    justify-content: space-between; */
+}
+
+.navbar-expand-lg {
+    justify-content: space-between;
+
+}
+
+.navbar-collapse {
+    flex-grow: 0 !important;
+}
