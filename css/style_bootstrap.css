@@ -13,3 +13,37 @@
 .navbar-collapse {
     flex-grow: 0 !important;
 }
+
+a:hover {
+    color: transparent;
+}
+
+.row {
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.nav-link:hover {
+    color: #f1c100 !important;
+}
+
+
+.dropdown-item:hover {
+    color: #f1c100 !important;
+    content: ;
+}
+
+.dropdown-menu {
+    min-width: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.dropdown-item:focus,
+.dropdown-item:hover {
+    background-color: transparent;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255, 255, 255);
+}
