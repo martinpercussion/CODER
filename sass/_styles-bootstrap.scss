@@ -1,0 +1,15 @@
+.bg-navbar {
+	background-color: transparent;
+	display: flex;
+}
+.navbar-expand-lg {
+	justify-content: space-between;
+}
+.navbar-collapse {
+	flex-grow: 0 !important;
+}
+a {
+	&:hover {
+		color: transparent;
+	}
+}

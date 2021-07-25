@@ -8,7 +8,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
         <link rel="stylesheet" href="css/style_bootstrap.css">   
-        <link rel="stylesheet" href="css/style.css">    
+        <link rel="stylesheet" href="./css_sass/styles.css">    
         <script src="https://kit.fontawesome.com/b14235a52e.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
     
@@ -18,54 +18,57 @@
             <link href="https://fonts.googleapis.com/css2?
             family=Source+Code+Pro&display=swap" rel="stylesheet">          
             
-    </head>
+        </head>
 
-    <body>
-
-        <header class="header">  
-                                
-            <div>                             
-                                                           
-                             
-                                
-             <nav class="navbar navbar-expand-lg navbar-dark bg-navbar ">
-              <a class="navbar-brand" href="index.html"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
-          
-          
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
-              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-                                    
-              <div class="collapse navbar-collapse tincho " id="navbarSupportedContent">
-              <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-              <li class="nav-item dropdown">
-          
-              <a class="nav-link dropdown-toggle box uno subnav"
-              href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
-              aria-haspopup="true" aria-expanded="false" href="members.html"> members                                     
-              </a>
-          
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">member1</a>
-              <a class="dropdown-item" href="">member2</a> 
-              <a class="dropdown-item" href="">member3</a>
-              <a class="dropdown-item" href="">member4</a>  
-              <a class="dropdown-item" href="">member5</a>                                   
-              </div>
-                                              
-            </li>
-            <a class="nav-link" href="media.html" id="">media <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="concert_dates.html" id="">concert dates</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="press.html" id="">press</a>
-            </li>                 
-            </ul>                              
-            </nav>           
+        <body>
+        
+                <!--header - menú desplegable -->
+        
+          <header class="header">  
+                                        
+          <div>                             
+                                                         
+                           
+                              
+           <nav class="navbar navbar-expand-lg navbar-dark bg-navbar ">
+            <a class="navbar-brand" href="#"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
+        
+        
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+                                  
+            <div class="collapse navbar-collapse tincho " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+            <li class="nav-item dropdown">
+        
+            <a class="nav-link dropdown-toggle box uno subnav"
+            href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+            aria-haspopup="true" aria-expanded="false" href="members.html"> members                                     
+            </a>
+        
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="">member1</a>
+            <a class="dropdown-item" href="">member2</a> 
+            <a class="dropdown-item" href="">member3</a>
+            <a class="dropdown-item" href="">member4</a>  
+            <a class="dropdown-item" href="">member5</a>                                   
+            </div>
+                                            
+          </li>
+          <a class="nav-link" href="media.html" id="">media <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="concert_dates.html" id="">concert dates</a>
+          </li>
+          <li class="nav-item">
+          <a class="nav-link" href="press.html" id="">press</a>
+          </li>                 
+          </ul>                              
+          </nav>
+            
 
   
         <!--main section -->
@@ -97,19 +100,29 @@
         
 
         <div class="row">
-          <div class="col w-100 gridmembers"> <img src="./resources/member5.png" alt="">           
+          <div class="col w-100 gridmembers"> <img class="unix" src="/resources/member5.png" alt="">
+            <div class="content 1">Lorem ipsum</div>
+            <div class="instrumento trumpet "></div>
           </div>
 
-          <div class="col  w-100 gridmembers"> <img src="./resources/member2.png" alt="">           
+          <div class="col  w-100 gridmembers"> <img src="/resources/member2.png" alt=""> 
+            <div class="content 2">Lorem ipsum</div>
+            <div class="trumpet"></div>          
           </div>
 
-          <div class="col w-100  gridmembers"> <img src="./resources/member3.png" alt="">           
+          <div class="col w-100  gridmembers"> <img src="/resources/member3.png" alt="">  
+            <div class="content 3">Lorem ipsum</div>
+            <div class="Flugelhorn"></div>         
           </div>
 
-          <div class="col w-100  gridmembers"> <img src="./resources/member4.png" alt="">           
+          <div class="col w-100  gridmembers"> <img src="/resources/member4.png" alt="">
+            <div class="content 4">Lorem ipsum</div>
+            <div class="Trombone"></div>          
           </div>
 
-          <div class="col w-100  gridmembers"> <img src="./resources/member5.png" alt="">          
+          <div class="col w-100  gridmembers"> <img src="/resources/member5.png" alt="">
+            <div class="content 5">Lorem ipsum</div> 
+            <div class="Vibraphone"></div>         
           </div>
 
 
