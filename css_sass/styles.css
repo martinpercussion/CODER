@@ -15,13 +15,78 @@ a:hover {
   color: transparent;
 }
 
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.nav-link:hover {
+  color: #f1c100 !important;
+}
+
+.dropdown-item:hover {
+  color: #f1c100 !important;
+  background-color: transparent;
+}
+
+.dropdown-item:hover:focus {
+  background-color: transparent;
+}
+
+.dropdown-menu {
+  min-width: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: white;
+}
+
+.btn-success {
+  background-color: white;
+}
+
+.btn-success:hover {
+  background-color: #000000 !important;
+  border-color: white;
+}
+
+.btn-danger:not(:disabled):not(.disabled).active,
+.btn-danger:not(:disabled):not(.disabled):active,
+.show > .btn-danger.dropdown-toggle {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.btn-danger {
+  background-color: #535353;
+  border-color: transparent;
+}
+
+.btn-danger:hover {
+  color: #fff;
+  background-color: #424242;
+  border-color: transparent;
+}
+
+.btn-danger.focus,
+.btn-danger:focus {
+  display: none;
+}
+
+.navbar-nav .dropdown-menu {
+  position: static;
+  float: none;
+  width: fit-content;
+}
+
 * {
   list-style: none;
   padding: 0px;
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;
-  margin-left: 2px;
-  margin-right: 2px;
+  margin-left: 1px;
+  margin-right: 1px;
   scroll-behavior: smooth;
 }
 
@@ -62,6 +127,7 @@ a {
   padding: 2px;
 }
 
+/* navbar */
 .subnav .subnavbtn {
   color: white;
   border: none;
@@ -93,6 +159,7 @@ a {
   border-bottom: 2px solid white;
 }
 
+/* main */
 #intro {
   display: flex;
   border: 0px;
@@ -105,7 +172,7 @@ a {
 }
 
 #intro #main {
-  background-image: url(../resources/female-saxophonist-plays-the-saxophone-on-stage-FJ7LUCZ.jpg);
+  background-image: url(/resources/female-saxophonist-plays-the-saxophone-on-stage-FJ7LUCZ.jpg);
   background-size: cover;
   background-position: center;
   height: 500px;
@@ -131,6 +198,7 @@ a {
   scroll-behavior: smooth;
 }
 
+/* members  */
 .flex__list {
   max-width: 100%;
   height: 300px;
@@ -149,10 +217,98 @@ a {
 .gridmembers {
   display: flex;
   margin-bottom: 25px;
+  justify-content: space-around;
 }
 
 .gridmembers:hover {
-  transform: scale(1.2, 1.2);
+  transform: scale(1.1, 1.1);
+  transition: all 300ms ease-in-out;
+}
+
+.popup .overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  margin-left: 0;
+  margin-top: 0;
+  background-color: #000002;
+  z-index: 1;
+  display: none;
+}
+
+.popup .contents {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background-color: #000000;
+  color: #ccc;
+  width: fit-content;
+  height: fit-content;
+  z-index: 2;
+  text-align: center;
+  padding: 10%;
+  box-sizing: border-box;
+}
+
+.content-title {
+  border-bottom: 1px solid white;
+}
+
+.close-btn {
+  position: fixed;
+  width: 900vh;
+  height: 2900vh;
+  background-color: transparent;
+  color: #ccc;
+  z-index: 1;
+  margin: -599px;
+  transition: all 900ms ease-in-out;
+}
+
+.popup-button {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: 0px solid white;
+  cursor: pointer;
+  background-color: #000000;
+  font-size: 20px;
+}
+
+.popup.active .overlay {
+  display: block;
+}
+
+.popup.active .contents {
+  transition: all 300ms ease-in-out;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* members popup + button*/
+.popup-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.popup-button span:after {
+  content: '+';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.popup-button:hover span {
+  padding-right: 25px;
+}
+
+.popup-button:hover span:after {
+  opacity: 1;
+  right: 0;
 }
 
 .content {
@@ -162,16 +318,21 @@ a {
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  align-content: space-around;
-  justify-content: space-evenly;
+  flex-direction: column;
+  align-content: stretch;
+  justify-content: center;
   align-items: center;
   opacity: 0;
+  flex-wrap: nowrap;
 }
 
 .content:hover {
   opacity: 1;
   margin-bottom: 25px;
+}
+
+.container-members {
+  margin-top: 40px;
 }
 
 .trumpet::after {
@@ -195,6 +356,10 @@ a {
 }
 
 /* contact form */
+input {
+  margin: 10px;
+}
+
 .formularios {
   color: white;
   font-family: 'Courier New', Courier, monospace;
@@ -208,9 +373,6 @@ a {
 
 .formularios .imputs {
   padding: 20px;
-  display: flex;
-  position: relative;
-  justify-content: center;
 }
 
 .dix {
@@ -228,6 +390,7 @@ a {
   flex-direction: row;
   align-items: center;
   margin: 10px;
+  width: auto;
 }
 
 .buttonss {
@@ -252,28 +415,31 @@ a {
   padding-top: 10%;
 }
 
-.container {
+.containers.form {
   padding: 19px;
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto auto auto;
   grid-template-rows: auto auto auto;
-  grid-template-areas: none;
   row-gap: 4px;
+  height: auto;
+  background-color: #f1c100;
 }
 
-.date {
+/* concert dates */
+.dates {
   color: white;
   height: fit-content;
-  width: fit-content;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  font-size: 18px;
+  font-size: 15px;
+  margin-bottom: 40px;
+  margin-top: 50px;
 }
 
-.date .item1 {
+.dates .item1 {
   color: white;
   height: fit-content;
   width: fit-content;
@@ -282,7 +448,7 @@ a {
   padding: 10px;
 }
 
-.date .item1 .item2 {
+.dates .item1 .item2 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -290,7 +456,7 @@ a {
   align-items: center;
 }
 
-.date .item1 .item2 .item3 {
+.dates .item1 .item2 .item3 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -298,7 +464,7 @@ a {
   align-items: center;
 }
 
-.date .item1 .item2 .item3 .item4 {
+.dates .item1 .item2 .item3 .item4 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -307,7 +473,7 @@ a {
   width: 80px;
 }
 
-.date .item1 .item2 .item3 .item4 .item5 {
+.dates .item1 .item2 .item3 .item4 .item5 {
   height: fit-content;
   flex-direction: row;
   align-content: stretch;
@@ -317,7 +483,7 @@ a {
   width: auto;
 }
 
-.date .item2 {
+.dates .item2 {
   color: white;
   height: fit-content;
   width: fit-content;
@@ -326,7 +492,7 @@ a {
   padding: 10px;
 }
 
-.date .item2 .item2 {
+.dates .item2 .item2 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -334,7 +500,7 @@ a {
   align-items: center;
 }
 
-.date .item2 .item2 .item3 {
+.dates .item2 .item2 .item3 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -342,7 +508,7 @@ a {
   align-items: center;
 }
 
-.date .item2 .item2 .item3 .item4 {
+.dates .item2 .item2 .item3 .item4 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -351,7 +517,7 @@ a {
   width: 80px;
 }
 
-.date .item2 .item2 .item3 .item4 .item5 {
+.dates .item2 .item2 .item3 .item4 .item5 {
   height: fit-content;
   flex-direction: row;
   align-content: stretch;
@@ -361,7 +527,7 @@ a {
   width: auto;
 }
 
-.date .item3 {
+.dates .item3 {
   color: white;
   height: fit-content;
   width: fit-content;
@@ -370,7 +536,7 @@ a {
   padding: 10px;
 }
 
-.date .item3 .item2 {
+.dates .item3 .item2 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -378,7 +544,7 @@ a {
   align-items: center;
 }
 
-.date .item3 .item2 .item3 {
+.dates .item3 .item2 .item3 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -386,7 +552,7 @@ a {
   align-items: center;
 }
 
-.date .item3 .item2 .item3 .item4 {
+.dates .item3 .item2 .item3 .item4 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -395,7 +561,7 @@ a {
   width: 80px;
 }
 
-.date .item3 .item2 .item3 .item4 .item5 {
+.dates .item3 .item2 .item3 .item4 .item5 {
   height: fit-content;
   flex-direction: row;
   align-content: stretch;
@@ -405,7 +571,7 @@ a {
   width: auto;
 }
 
-.date .item4 {
+.dates .item4 {
   color: white;
   height: fit-content;
   width: fit-content;
@@ -414,7 +580,7 @@ a {
   padding: 10px;
 }
 
-.date .item4 .item2 {
+.dates .item4 .item2 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -422,7 +588,7 @@ a {
   align-items: center;
 }
 
-.date .item4 .item2 .item3 {
+.dates .item4 .item2 .item3 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -430,7 +596,7 @@ a {
   align-items: center;
 }
 
-.date .item4 .item2 .item3 .item4 {
+.dates .item4 .item2 .item3 .item4 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -439,7 +605,7 @@ a {
   width: 80px;
 }
 
-.date .item4 .item2 .item3 .item4 .item5 {
+.dates .item4 .item2 .item3 .item4 .item5 {
   height: fit-content;
   flex-direction: row;
   align-content: stretch;
@@ -449,7 +615,7 @@ a {
   width: auto;
 }
 
-.date .item5 {
+.dates .item5 {
   color: white;
   height: fit-content;
   width: fit-content;
@@ -458,7 +624,7 @@ a {
   padding: 10px;
 }
 
-.date .item5 .item2 {
+.dates .item5 .item2 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -466,7 +632,7 @@ a {
   align-items: center;
 }
 
-.date .item5 .item2 .item3 {
+.dates .item5 .item2 .item3 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -474,7 +640,7 @@ a {
   align-items: center;
 }
 
-.date .item5 .item2 .item3 .item4 {
+.dates .item5 .item2 .item3 .item4 {
   flex-direction: column;
   align-content: stretch;
   flex-wrap: nowrap;
@@ -483,7 +649,7 @@ a {
   width: 80px;
 }
 
-.date .item5 .item2 .item3 .item4 .item5 {
+.dates .item5 .item2 .item3 .item4 .item5 {
   height: fit-content;
   flex-direction: row;
   align-content: stretch;
@@ -509,6 +675,30 @@ a {
   grid-row: 3/ 4;
   grid-column: 3/6;
   width: fit-content;
+}
+
+/* concert dates Zebras*/
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+tr:nth-of-type(odd) {
+  background: #f1c100;
+}
+
+th {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
+td,
+th {
+  padding: 6px;
+  border: 1px solid #ccc;
+  text-align: center;
+  color: white;
 }
 
 .member1 {
@@ -548,9 +738,13 @@ footer {
   display: grid;
   justify-content: center;
   grid-column-gap: 0px;
-  grid-template-rows: repeat(3, auto);
-  height: 230px;
+  height: 200px;
   background-image: linear-gradient(to bottom, black, #1b1a1a);
+  margin-bottom: 0px;
+  position: absolute;
+  width: 100%;
+  align-items: end;
+  padding-bottom: 5px;
 }
 
 footer h2 {
@@ -566,7 +760,7 @@ footer .iconsfit {
   font-size: 40px;
 }
 
-footer a {
+footer .iconsfit a {
   color: #fff;
 }
 
@@ -581,6 +775,8 @@ footer a {
   grid-area: main;
   grid-template-columns: auto auto;
   grid-template-rows: auto auto;
+  justify-content: space-around;
+  margin-top: 40px;
 }
 
 .media .media__player1 {
@@ -603,9 +799,12 @@ footer a {
 
 /*  PRESS  */
 .pressLogos {
-  display: flex;
+  display: grid;
   justify-content: space-evenly;
   height: 295px;
+  grid-template-columns: auto auto auto auto auto;
+  align-content: center;
+  margin-top: 40px;
 }
 
 .pressLogos .logo {
@@ -613,12 +812,58 @@ footer a {
   width: auto;
 }
 
-@media screen and (max-width: 991px) {
+.pressLogos .logo.logo:hover {
+  transform: scale(1.2, 1.2);
+  transition: all 300ms ease-in-out;
+}
+
+/* media queries  */
+@media screen and (min-width: 426px) and (max-width: 991px) {
+  table {
+    width: fit-content;
+    border-collapse: collapse;
+    background-color: transparent;
+    justify-content: center;
+  }
   .gridmembers {
     display: flex;
     justify-content: center;
     margin: 15px;
     vertical-align: top;
+  }
+  label {
+    display: block;
+  }
+  .media {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .pressLogos {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  table {
+    width: fit-content;
+    border-collapse: collapse;
+    font-size: 9px;
+    background-color: transparent;
+  }
+  label {
+    display: block;
+  }
+  .media {
+    contain: content;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+  }
+  .pressLogos {
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    contain: content;
+    height: auto;
   }
 }
 /*# sourceMappingURL=styles.css.map */
