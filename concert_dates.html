@@ -4,10 +4,34 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">    
         <meta name="viewport" content="width=device-width, initial-scale=1.0">  
-        <title>brass_ensamble</title>
+
+       <!-- SEO -->
+       <title>brass_ensamble</title>
+       <meta name="description" content="Brass Ensamble German Brass is a brass ensemble,
+        founded 2002 as a Brass Quintet by argentinian percussionist Martin Rodriguez">
+        <meta name="keywords" content="Concert dates, brass music, classical concerts, 
+        Amanda Johnson, Roger Smith, Maurice Brown, Kirby Sartin, Harold Real, brass">
+
+        <!-- Facebook Meta Tags -->
+       <meta property="og:url" content="https://martinpercussion.github.io/CODER/concert_dates.html"/>
+       <meta property="og:type" content="website">
+       <meta property="og:title" content="Brass Ensamble">
+       <meta property="og:description" content="Brass Ensamble">
+       <meta property="og:image" content=".resources/brass_ensemble_logo.png">
+       <meta property="fb:app_id" content=""/>
+
+       <!-- Facebook Pixel Code --> <script>  !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+       if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';  n.queue=[];t=b.createElement(e);t.async=!0;
+       t.src=v;s=b.getElementsByTagName(e)[0];  s.parentNode.insertBefore(t,s)}(window, document,'script', 
+       'https://connect.facebook.net/en_US/fbevents.js');  fbq('init', '4141611873');  
+       fbq('track', 'PageView'); </script> <noscript><img height="1" width="1" style="display:none" 
+       src="https://www.facebook.com/" /></noscript> 
+                 
+      <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> 
-        <link rel="stylesheet" href="css/style_bootstrap.css">   
+       <!--  <link rel="stylesheet" href="css/style_bootstrap.css"> -->   
         <link rel="stylesheet" href="./css_sass/styles.css">  
         <script src="https://kit.fontawesome.com/b14235a52e.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -51,12 +75,12 @@
           </a>
       
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="">member1</a>
-          <a class="dropdown-item" href="">member2</a> 
-          <a class="dropdown-item" href="">member3</a>
-          <a class="dropdown-item" href="">member4</a>  
-          <a class="dropdown-item" href="">member5</a>                                   
-          </div>
+            <a class="dropdown-item" href="members.html">Amanda Johnson</a>
+            <a class="dropdown-item" href="members.html">Roger Smith</a> 
+            <a class="dropdown-item" href="members.html">Maurice Brown</a>
+            <a class="dropdown-item" href="members.html">Kirby Sartin</a>  
+            <a class="dropdown-item" href="members.html">Harold Real</a>                                   
+            </div>
                                           
         </li>
         <a class="nav-link" href="media.html" id="">media <span class="sr-only">(current)</span></a>
@@ -68,89 +92,58 @@
         <a class="nav-link" href="press.html" id="">press</a>
         </li>                 
         </ul>                              
-        </nav>           
+        </nav> 
 
-    <h1>CONCERT DATES</h1>
-
-    <div class="container">
-
-        <div class="date">DATE   
-            
-            <table>
-                <tr>
-
-            <td class="item1">12-2-2021</td>
-            <td class="item1">19-3-2021</td>
-            <td class="item1">10-4-2021</td>
-            <td class="item1">09-5-2021</td>  
-                </table>
-            </tr>
-        </div>
-
-        <div class="date">VENUE
-
-            <table>
-                <tr>
-
-            <td class="item2">Glastonbury Festival</td>
-            <td class="item2">Download Festival, Donington Park</td>
-            <td class="item2">Wembley Stadium</td>
-            <td class="item2">Twickenham Stadium</td>  
-                </table>
-            </tr>
-        </div>
-
-        <div class="date">LOCATION
-
-            <table>
-                <tr>
-
-            <td class="item3">Worthy Farm - UK</td>
-            <td class="item3">Leicestershire - UK</td>
-            <td class="item3">London - UK</td>
-            <td class="item3">Twickenham - UK</td>  
-                </table>
-            </tr>
-        </div>
-
-        <div class="date">CAPACITY
-
-            <table>
-                <tr>
-
-            <td class="item4">3.000</td>
-            <td class="item4">4.000</td>
-            <td class="item4">7.000</td>
-            <td class="item4">14.000</td>  
-                </table>
-            </tr>
-        </div>
-
-
-        <div class="date">TICKETS
-
-            <table>
-                <tr>
-
-            <td class="item5">AVAILABLE</td>
-            <td class="item5">SOLD-OUT</td>
-            <td class="item5">SOLD OUT</td>
-            <td class="item5">LAST-TICKETS!</td>  
-                </table>
-            </tr>
-        </div>
-
+    <main>
         
-
-        <div class="item6">Due to CORONA LOCK-DOWN, please check dates regurarely</div>
-        
-        <div class="item7">Venue could change due to CORONA LOCK-DOWN</div>
+    <section class="dates">
 
     
-    </div>            
+    <table>
+        <thead>
+        <tr>
+            <th>DATE </th>
+            <th>VENUE</th>
+            <th>LOCATION</th>
+            <th>TICKETS</th>            
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>12/2/2021</td>
+            <td>Glastonbury Festival</td>
+            <td>Worthy Farm - UK</td>
+            <td><button type="button" class="btn btn-danger">BUY</button></td>
+        </tr>
+        <tr>
+            <td>19-3-2021</td>
+            <td>Download Festival, Donington Park</td>
+            <td>Leicestershire - UK</td>
+            <td><button type="button" class="btn btn-danger">BUY</button></td>
+        </tr>
+
+        <tr>
+            <td>10-4-2021</td>
+            <td>Wembley Stadium</td>
+            <td>London - UK</td>
+            <td><button type="button" class="btn btn-danger">BUY</button></td>
+        </tr>
+        
+
+        <tr>
+            <td>10-4-2021</td>
+            <td>Twickenham Stadium</td>
+            <td>Twickenham - UK</td>
+            <td><button type="button" class="btn btn-danger">BUY</button></td>
+        </tr>
+    </tbody>
+    </table>
+
+</section>
+
       
 
-            <!-- Formulario Newsletter Conciertos -->
+    <!-- Formulario Newsletter Conciertos -->
 
         <h3 class="">Keep up with the latest Gigs and Tours</h3>
 
@@ -165,22 +158,22 @@
         <div class="imputs">
             
 
-            <label for="name">Name:</label>
+            <label for="name">Name</label>
             <input id="name" type="text" name="name">
 
         
 
-            <label for="email">Email:</label>
+            <label for="email">Email</label>
             <input id="email" type="email" name="email" required>
 
         </div>          
            
         
-            <!-- Selector países -->   
+    <!-- Selector países -->   
 
         <div class="dix">   
 
-            <label for="paises">Choose your country</label>
+            <label for="paises">Choose your country &nbsp</label>
             <select name="paises" id="paises">
             <option value="sel">USA</option>
             <option value="ARG">ENGLAND</option>
@@ -194,52 +187,49 @@
 
                
 
-            <!-- Checkbox -->
+    <!-- Checkbox -->
 
         <div class="checkboxes">
 
-            <label for="check-1">i agree</label>
+            <label class="checker" for="check-1">i agree &nbsp</label>
             <input id="check-1" type="checkbox" name="acepta" value="1">      
                                         
-            <!-- Button -->
+    <!-- Button -->
 
         </div>
 
-        <input class="buttonss" type="submit" value="Send">
+        <input class="btn" type="submit" value="Send">
 
         </form>
         
         </fieldset>
-</div>
-
-    
-            <!--footer -->  
-
-            
-<footer class="borders">
-    
-    <h2>FOLLOW US</h2> <a href=""></a>
-
-        <!--social media -->
-        
-        <div class="iconsfit">
-
-            <a href="facebook.com"></a><span><i class="fab fa-facebook"></i></span>            
-            <a href="tweeter.com"></a><span><i class="fab fa-youtube-square"></i></span>
-            <a href="instagram.com"></a><span><i class="fab fa-instagram-square"></i></span>
-            
-
-        <!--contact us -->
-            
-            <a href="mail to:martin@gmail.com"></a><i class="fas fa-envelope"></i>
 
         </div>
 
         
+    </main>
+    
+    <!--footer -->  
+
+      
+<footer class="borders">
+    
+    <h2>FOLLOW US</h2> <a href=""></a>
+
+    <!--social media -->
+        
+        <div class="iconsfit">
+
+            <a href="https://facebook.com"><span><i class="fab fa-facebook"></i></span></a>          
+            <a href="https://tweeter.com"><span><i class="fab fa-youtube-square"></i></span></a> 
+            <a href="https://instagram.com"><span><i class="fab fa-instagram-square"></i></span></a> 
             
-           
-    
-    
+
+    <!--contact us -->
+            
+            <a href="mail to:martin@gmail.com"></a><i class="fas fa-envelope"></i>
+
+        </div>
 
 </footer>
 

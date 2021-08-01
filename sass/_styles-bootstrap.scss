@@ -2,14 +2,93 @@
 	background-color: transparent;
 	display: flex;
 }
+
 .navbar-expand-lg {
 	justify-content: space-between;
 }
+
 .navbar-collapse {
 	flex-grow: 0 !important;
 }
+
 a {
 	&:hover {
 		color: transparent;
 	}
+}
+
+.row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.nav-link {
+	&:hover {
+		color: #f1c100 !important;
+	}
+}
+
+.dropdown-item {
+	&:hover {
+		color: #f1c100 !important;
+		background-color: transparent;
+
+		&:focus {
+			background-color: transparent;
+		}
+	}
+}
+
+.dropdown-menu {
+	min-width: 0;
+	background-color: rgba(255, 255, 255, 0.9);
+}
+
+.navbar-dark {
+	.navbar-nav {
+		.nav-link {
+			color: rgb(255, 255, 255);
+		}
+	}
+}
+
+.btn-success {
+	background-color: white;
+
+	&:hover {
+		background-color: #000000 !important;
+		border-color: white;
+	}
+}
+
+
+.btn-danger:not(:disabled):not(.disabled).active,
+.btn-danger:not(:disabled):not(.disabled):active,
+.show>.btn-danger.dropdown-toggle {
+	background-color: transparent;
+	border-color: transparent;
+}
+
+.btn-danger {
+	background-color: rgb(83, 83, 83);
+	border-color: transparent;
+}
+
+.btn-danger:hover {
+	color: #fff;
+	background-color: rgb(66, 66, 66);
+	border-color: transparent;
+}
+
+.btn-danger.focus,
+.btn-danger:focus {
+	display: none;
+
+}
+
+.navbar-nav .dropdown-menu {
+	position: static;
+	float: none;
+	width: fit-content;
+
 }
