@@ -3,7 +3,7 @@
 
 @mixin hover {
     &:hover {
-        color: #f1c100;
+        color: $rgba;
         @content;
     }
 }
@@ -12,27 +12,31 @@
     list-style: none;
     padding: 0px;
     text-decoration: none;
-    font-family: 'Source Code Pro', monospace;
+    font-family: $font;
     margin-left: 1px;
     margin-right: 1px;
     scroll-behavior: smooth;
 }
 
+html {
+    font-size: 100%;
+}
+
 h1 {
     color: transparent;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: $font;
     text-align: center;
 }
 
 h2 {
     color: transparent;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: $font;
     text-align: center;
 }
 
 h3 {
     color: rgb(255, 255, 255);
-    font-family: 'Courier New', Courier, monospace;
+    font-family: $font;
     text-align: center;
     list-style-type: none;
     box-sizing: border-box;
@@ -59,7 +63,7 @@ a {
 
 .subnav {
     .subnavbtn {
-        color: white;
+        color: $fontColour;
         border: none;
     }
 
@@ -84,10 +88,10 @@ a {
         align-items: stretch;
         width: 90px;
         background-color: $backgroundColour;
-        color: red;
+        color: $rgba;
 
         &::before {
-            border-bottom: 2px solid white;
+            border-bottom: 2px solid $fontColour;
         }
     }
 }
@@ -106,38 +110,108 @@ a {
     padding: 0px;
 
     #main {
-        background-image: url(/resources/female-saxophonist-plays-the-saxophone-on-stage-FJ7LUCZ.jpg);
+        background-image: url(../resources/portrait.jpg);
         background-size: cover;
         background-position: center;
         height: 500px;
         width: auto;
         background-size: inherit;
         display: flex;
-        justify-content: space-around;
-        align-items: flex-end;
-    }
-
-    .icon {
-        display: flex;
-        color: rgb(255, 255, 255);
-        font-size: 35px;
-        width: 0px;
-
-        @include hover {
-            animation: blink 1s steps(5, start) infinite;
-            opacity: 0.9;
-            transition: 0.9s;
-            scroll-behavior: smooth;
-
-        }
+        align-items: center;
+        flex-direction: column-reverse;
+        flex-wrap: wrap;
+        align-content: space-around;
+        justify-content: flex-start;
     }
 }
+
+.icon {
+    display: flex;
+    color: $fontColour;
+    font-size: 2.1875em;
+    width: 0px;
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+
+    @include hover {
+        animation: blink 1s steps(5, start) infinite;
+        opacity: 0.9;
+        transition: 0.9s;
+        scroll-behavior: smooth;
+
+    }
+}
+
+/* biography__Index */
+
+.biography {
+    display: flex;
+    height: fit-content;
+}
+
+.bio__text {
+    text-align: justify;
+    display: flex;
+    padding-block: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    color: #b6b6b6;
+
+}
+
+blockquote h3 {
+    font-size: 1.5625em;
+}
+
+blockquote h3:before {
+    content: "\00bb";
+    font-weight: bold;
+    font-size: 3.125em;
+    color: $rgba;
+    left: 0px;
+    font-family: 'Georgia';
+    top: -15px;
+    position: absolute;
+}
+
+blockquote h3:after {
+    content: "\00ab";
+    font-weight: bold;
+    font-size: 3.125em;
+    color: $rgba;
+    position: absolute;
+    bottom: -0.6em;
+    right: 10px;
+    font-family: 'Georgia';
+    display: none;
+
+}
+
+.readmore {
+    color: #b6b6b6;
+    display: contents;
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+    text-decoration-color: $rgba;
+
+    &.readmore:hover {
+        color: $rgba;
+
+    }
+}
+
 
 /* members  */
 
 .flex__list {
     max-width: 100%;
-    height: 300px;
+    height: 1900px;
     background: $backgroundColour;
     margin-bottom: 25px * 2;
     padding: 0px;
@@ -153,109 +227,147 @@ a {
 .gridmembers {
     display: flex;
     margin-bottom: 25px;
-    justify-content: space-around;
-
+    justify-content: center;
 
     &:hover {
         transform: scale(1.1, 1.1);
         transition: all 300ms ease-in-out;
+
+
     }
 }
 
-.popup .overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    margin-left: 0;
-    margin-top: 0;
-    background-color: rgb(0, 0, 2);
-    z-index: 1;
-    display: none;
 
-}
 
-.popup .contents {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    background-color: #000000;
-    color: #ccc;
-    width: fit-content;
-    height: fit-content;
-    z-index: 2;
-    text-align: center;
-    padding: 10%;
-    box-sizing: border-box;
-}
+/* Popups */
 
-.content-title {
-    border-bottom: 1px solid white;
 
-}
-
-.close-btn {
-    position: fixed;
-    width: 900vh;
-    height: 2900vh;
-    background-color: transparent;
-    color: #ccc;
-    z-index: 1;
-    margin: -599px;
-    transition: all 900ms ease-in-out;
-}
-
-.popup-button {
-    position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
-    border: 0px solid white;
-    cursor: pointer;
-    background-color: #000000;
-    font-size: 20px;
-}
-
-.popup.active .overlay {
-    display: block;
-}
-
-.popup.active .contents {
-    transition: all 300ms ease-in-out;
-    transform: translate(-50%, -50%) scale(1);
-}
-
-/* members popup + button*/
-
-.popup-button span {
-    cursor: pointer;
-    display: inline-block;
-    position: relative;
-    transition: 0.5s;
-}
-
-.popup-button span:after {
-    content: '+';
+.btn-open-popups {
     position: absolute;
     opacity: 0;
-    top: 0;
-    right: -20px;
-    transition: 0.5s;
+    height: 310px;
+    width: 210px;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
+
+
+    &:hover {
+        opacity: 1;
+        color: $rgba;
+        background-color: rgba(0, 0, 0, 0.7);
+        font-size: 1.5em;
+    }
 }
 
-.popup-button:hover span {
-    padding-right: 25px;
+
+.container-all {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 600ms;
+
 }
 
-.popup-button:hover span:after {
+.container-all:target {
+    background-color: $backgroundColour;
+    visibility: visible;
     opacity: 1;
-    right: 0;
 }
 
+.popups {
+    display: flex;
+    width: -webkit-fill-available;
+    height: fit-content;
+    position: absolute;
+    padding-left: 10%;
+    top: 55%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    background-color: $backgroundColour;
+    z-index: 1;
+    padding-top: 3%;
+}
+
+.img {
+    width: 200px;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+
+}
+
+.container-text {
+    width: 60%;
+    padding-left: 10%;
+    overflow-y: auto;
+}
+
+.container-text h4 {
+    font-size: 1.875em;
+
+}
+
+.container-text p {
+    margin-top: 20px;
+    font-size: 1.125em;
+}
+
+.btn-close-popups {
+    width: 50px;
+    height: 50px;
+    position: inherit;
+    padding: 8px;
+    background-color: $rgba;
+    color: transparent;
+    border-radius: 21%;
+}
+
+
+.contents {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: $fontColour;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+/* .clix {
+    width: fit-content;
+}
+
+
+.clix:hover {
+    filter: brightness(20%);
+
+} */
+
+
+.bios {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    align-content: flex-start;
+    justify-content: space-evenly;
+    margin-top: 25px;
+    grid-area: main;
+
+}
+
+.container-members {
+    margin-top: 40px;
+}
+
+/* members INDEX */
 
 .content {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.7);
-    color: white;
+    color: $fontColour;
     width: 100%;
     height: 100%;
     display: flex;
@@ -265,22 +377,11 @@ a {
     align-items: center;
     opacity: 0;
     flex-wrap: nowrap;
-
+    background-color: rgba(0, 0, 0, 0.7);
 
     &:hover {
         opacity: 1;
         margin-bottom: 25px;
-    }
-}
-
-.container-members {
-    margin-top: 40px;
-}
-
-@each $nombre,
-$instrumento in $instrumentos {
-    .#{$instrumento}::after {
-        content: "";
     }
 
 }
@@ -292,8 +393,8 @@ input {
 }
 
 .formularios {
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
+    color: $fontColour;
+    font-family: $font;
     text-align: center;
     margin-top: 20px;
     display: flex;
@@ -335,7 +436,7 @@ input {
     font-weight: 400;
     font-style: normal;
     border-color: rgba(255, 255, 255, 0.9);
-    color: #fff;
+    color: $fontColour;
     position: relative;
 
 }
@@ -357,96 +458,25 @@ input {
     grid-template-rows: auto auto auto;
     row-gap: 4px;
     height: auto;
-    background-color: #f1c100;
+    background-color: $rgba;
 }
 
 /* concert dates */
 
 .dates {
-    color: white;
+    color: $fontColour;
     height: fit-content;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    font-size: 15px;
+    font-size: 0.9375em;
     margin-bottom: 40px;
     margin-top: 50px;
 
-
-
-    @for $i from 1 to 6 {
-        .item#{$i} {
-            color: white;
-            height: fit-content;
-            width: fit-content;
-            display: flex;
-            font-size: 16px;
-            padding: 10px;
-
-            .item2 {
-                flex-direction: column;
-                align-content: stretch;
-                flex-wrap: nowrap;
-                justify-content: center;
-                align-items: center;
-
-
-                .item3 {
-                    flex-direction: column;
-                    align-content: stretch;
-                    flex-wrap: nowrap;
-                    justify-content: center;
-                    align-items: center;
-
-
-                    .item4 {
-                        flex-direction: column;
-                        align-content: stretch;
-                        flex-wrap: nowrap;
-                        justify-content: center;
-                        align-items: center;
-                        width: 80px;
-
-
-                        .item5 {
-                            height: fit-content;
-                            flex-direction: row;
-                            align-content: stretch;
-                            flex-wrap: nowrap;
-                            justify-content: center;
-                            align-items: baseline;
-                            width: auto;
-
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 
-
-.item6 {
-    background: rgb(65, 0, 0);
-    color: white;
-    grid-row: 3/ 4;
-    grid-column: 1/4;
-    display: grid;
-    width: fit-content;
-}
-
-
-
-.item7 {
-    background: rgb(65, 0, 0);
-    color: white;
-    display: grid;
-    grid-row: 3/ 4;
-    grid-column: 3/6;
-    width: fit-content;
-}
 
 /* concert dates Zebras*/
 
@@ -456,12 +486,12 @@ table {
 }
 
 tr:nth-of-type(odd) {
-    background: #f1c100;
+    background: $rgba;
 }
 
 th {
     background: rgb(0, 0, 0);
-    color: white;
+    color: $fontColour;
     font-weight: bold;
 }
 
@@ -470,37 +500,37 @@ th {
     padding: 6px;
     border: 1px solid #ccc;
     text-align: center;
-    color: white;
+    color: $fontColour;
 }
 
 
 .member1 {
-    color: white;
+    color: $fontColour;
     display: grid;
     width: fit-content;
     grid-column: 1/1;
 }
 
 .member2 {
-    color: white;
+    color: $fontColour;
     display: grid;
     width: fit-content;
 }
 
 .member3 {
-    color: white;
+    color: $fontColour;
     display: grid;
     width: fit-content;
 }
 
 .member4 {
-    color: white;
+    color: $fontColour;
     display: grid;
     width: fit-content;
 }
 
 .member5 {
-    color: white;
+    color: $fontColour;
     display: grid;
     width: fit-content;
 }
@@ -529,8 +559,8 @@ footer {
 
     .iconsfit {
         grid-column: 2/3;
-        color: #fff;
-        font-size: 40px;
+        color: $fontColour;
+        font-size: 2.5em;
 
         a {
             color: #fff;
@@ -541,7 +571,7 @@ footer {
 .iconsfit {
     i {
         &:hover {
-            color: #f1c100;
+            color: $rgba;
         }
     }
 
@@ -576,11 +606,8 @@ footer {
                     grid-row: 2/3;
 
                 }
-
-
             }
         }
-
     }
 }
 
@@ -605,9 +632,65 @@ footer {
             transition: all 300ms ease-in-out;
 
         }
-
     }
 }
+
+/* Critics - Carousel */
+
+.critics__text {
+    display: flex;
+    padding-block: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-bottom: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    color: rgb(182, 182, 182);
+
+}
+
+blockquote {
+    border: none;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin-bottom: -30px;
+    position: relative;
+    margin: 0 auto;
+    padding-left: 0.4em;
+
+}
+
+
+blockquote p {
+    font-size: 1.4375em;
+
+}
+
+
+blockquote p:before {
+    content: "\201C";
+    font-weight: bold;
+    font-size: 4.6875em;
+    color: $rgba;
+    position: fixed;
+    left: 3px;
+    font-family: 'Georgia';
+    top: -2px;
+}
+
+
+blockquote p:after {
+    content: "\201D";
+    font-weight: bold;
+    font-size: 4.6875em;
+    color: $rgba;
+    position: absolute;
+    bottom: -0.6em;
+    right: 10px;
+    font-family: 'Georgia';
+
+}
+
 
 /* media queries  */
 
@@ -639,7 +722,6 @@ footer {
 
     ;
 
-
     .media {
 
         grid-template-columns: auto;
@@ -655,16 +737,42 @@ footer {
         grid-template-rows: auto auto;
 
     }
+
+    ;
+
+    .content {
+        position: absolute;
+        color: $fontColour;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        flex-wrap: nowrap;
+
+        &:hover {
+            opacity: 1;
+            margin-bottom: 25px;
+        }
+
+    }
+
+    ;
+
+    .popups {
+        top: 65%;
+    }
+
 }
-
-
-
 
 @media screen and (max-width: 425px) {
     table {
         width: fit-content;
         border-collapse: collapse;
-        font-size: 9px;
+        font-size: 0.5625em;
         background-color: transparent;
     }
 
@@ -692,8 +800,23 @@ footer {
         grid-template-rows: auto;
         contain: content;
         height: auto;
-
-
     }
 
+    ;
+
+    .popups {
+        top: 26%;
+    }
+
+    ;
+
+    .img {
+        display: none;
+    }
+
+    ;
+
+    .container-text {
+        width: 100%;
+    }
 }

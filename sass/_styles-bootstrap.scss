@@ -17,11 +17,6 @@ a {
 	}
 }
 
-.row {
-	margin-left: 0px;
-	margin-right: 0px;
-}
-
 .nav-link {
 	&:hover {
 		color: #f1c100 !important;
@@ -92,3 +87,8 @@ a {
 	width: fit-content;
 
 }
+
+.carousel-indicators {
+	bottom: 0px;
+}
+

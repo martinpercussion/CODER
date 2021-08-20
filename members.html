@@ -2,8 +2,9 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">            
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <meta name="author" content="martinpercussion.com">   
         
         <!-- SEO -->
         <title>brass_ensamble</title>
@@ -36,32 +37,33 @@
         <script src="https://kit.fontawesome.com/b14235a52e.js" crossorigin="anonymous"></script>
         <link rel="preconnect" href="https://fonts.gstatic.com">   
            
-            <!--Google Font -->
+        <!--Google Font -->
             
             <link href="https://fonts.googleapis.com/css2?
             family=Source+Code+Pro&display=swap" rel="stylesheet">  
             
         
             <script>
-                function togglePopup () {
-                    document.getElementById ("popup-1").classList.toggle("active");
-    
-                }
+               function togglePopup(num){
+                document.getElementById(`popup-${num}`).classList.toggle("active"); 
+                }  
             </script>
             
             
     </head>
 
-<body>
+    <body>
 
+
+    <!--header - menú desplegable -->
+        
     <header class="header">  
-                            
+                                        
         <div>                             
-                                                       
-                         
+                        
                             
          <nav class="navbar navbar-expand-lg navbar-dark bg-navbar ">
-          <a class="navbar-brand" href="index.html"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
+          <a class="navbar-brand" href="/index.html"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
       
       
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -69,107 +71,189 @@
           <span class="navbar-toggler-icon"></span>
           </button>
                                 
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse tincho " id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
           <li class="nav-item dropdown">
-      
-          <a class="nav-link dropdown-toggle box uno subnav"
-          href="members.html" id="navbarDropdown" role="button" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false" href="members.html"> members                                     
-          </a>
-      
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="members.html">Amanda Johnson</a>
-            <a class="dropdown-item" href="members.html">Roger Smith</a> 
-            <a class="dropdown-item" href="members.html">Maurice Brown</a>
-            <a class="dropdown-item" href="members.html">Kirby Sartin</a>  
-            <a class="dropdown-item" href="members.html">Harold Real</a>                                   
-            </div>
-                                          
+
         </li>
-        <a class="nav-link" href="media.html" id="">media <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="members.html">members</a>
+        </li>                                                   
+        </li>
+        <a class="nav-link" href="media.html">media</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="concert_dates.html" id="">concert dates</a>
+        <a class="nav-link" href="concert_dates.html">concert dates</a>
         </li>
         <li class="nav-item">
-        <a class="nav-link" href="press.html" id="">press</a>
+        <a class="nav-link" href="press.html">press</a>
         </li>                 
         </ul>                              
-        </nav>                        
-                                                                     
-                          
+        </nav>
         
-    <!--main section - band members -->   
-
-     <!-- pop up members -->  
-      
-                     
-            <div class="container-fluid container-members"> 
-                <div class="popup" id="popup-1">
-                    <div class="overlay"></div> 
-                    <div class="contents">
-                        <div class="close-btn" onclick="togglePopup()">&times;</div>
-
-                    <h4 class="content-title">Amanda Johnson</h4>
-
-                    <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>                      
-                   
-                    </div>
-                </div>
-
-            <div class="row">
-                
-
-            <div class="col gridmembers"> <img src="./resources/member5.png" alt="member number 5"> 
-                
-                <div class="content 1">
-                    
-                <button onclick="togglePopup()" class="popup-button"><span>BIO</span></button>  
-                </div>  
-                
-                
-
-            </div>
-            
+        
+ 
+    <!--main section - band members -->  
           
+      
 
-          <div class="col gridmembers"> <img src="./resources/member2.png" alt="member number 2"> <div class="content 1">
-                <button onclick="togglePopup()" class="popup-button"><span>BIO</span></button>  
-                </div>             
+      <main>         
+        
+ 
 
-            </div>
+<div class="container-fluid container-members">
 
-          <div class="col gridmembers"> <img src="./resources/member3.png" alt="member number 3">  <div class="content 1">
-            <button onclick="togglePopup()" class="popup-button"><span>BIO</span></button>  
-            </div>             
+    <div class="biography">
 
-        </div>
+    <blockquote><div><h3 id="bio" class="bio__text">Brass Ensamble has succeeded in creating “diversity in unity”, i.e. to work the miracle of producing a unique, unmistakable collective sound with ten individualists and renowned soloists from outstanding first-class Argentinian orchestras. As an ensemble they play transparent chamber music but at the same time with symphonic magnificence and dynamics that only brass intrumentalists can produce.</h3></div>
+  
 
-          <div class="col gridmembers"> <img src="./resources/member4.png" alt="member number 4"> <div class="content 1">
-            <button onclick="togglePopup()" class="popup-button"><span>BIO</span></button>  
-            </div>             
+    <blockquote><div><h3 id="bio" class="bio__text">The repertoire of Brass Ensamble includes all stylistic directions and kinds from Samuel Scheidt to Dmitri Shostakovich, from Dixieland to Bossa Nova. It contains unabashedly classical and “timeless”, serious and entertaining elements. In their concerts the ensemble nurtures and surmounts the division in two kinds of musical styles with professionality and fun: the programs contain arrangements of classicals works as well as adaptations and compositions of musical evergreens which have mostly been arranged and composed specially for Brass Ensamble and pay tribute to the typical sound and the technical brilliance of the ensemble. Listening to one of the concerts of Brass Ensamble, presented by Klaus Wallendorf of the ensemble with inimitably witty and entertaining comments as well as to one of the many recordings on CD is quite an experience.</h3></div>
+  
+  
+</div>
+</div>
 
-        </div>
+<!-- members setup -->
 
-          <div class="col gridmembers"> <img src="./resources/member5.png" alt="member number 5"><div class="content 1">
-            <button onclick="togglePopup()" class="popup-button"><span>BIO</span></button>  
-            </div>             
+<div class="row col container-fluid bios">
 
-        </div>
+
+
+     <!-- members 1  -->
+
+        <div class="contents gridmembers"><img class="clix" src="./resources/member7.png" alt="members 1">
+
+            <a href="#modal" class="btn-open-popups">BIO</a></div>
+
+                 
+            <div class="container-all" id="modal">
+
+                <div class="popups">
+                    
+                    <div class="img" ><img src="./resources/minibilder7.png" alt="members 1"> </div>
+
+                    <div class="container-text"><h4>Amanda Johnson</h4>
+
+                    <p> As a recitalist, Amanda has performed in China, Panama, Spain, France, the Netherlands, Austria, Finland, Greece, USA and Canada, having been awarded honors at competitions around the globe. At the age of 18, he gave two solo performances at Walt Disney Hall as the Grand Prize Winner of the Pasadena Showcase House Instrumental Competition judged by members of the Los Angeles Philharmonic. Amanda has gone on to win prizes at the Christian Lindberg International Competition, the Yamaha Music Foundation of Europe (YMFE) and the International Trombone Festival’s Robert Marsteller/Conn-Selmer and Larry Wiehe solo competitions, to name a few. Amanda was also awarded the Alexandros S. Onassis Foundation and Greek State Scholarship Foundation educational scholarships.</p>
+                
+                </div> 
+
+                <div><a href="#bios" class="btn-close-popups">x</a></div>
+                    
+                    
 
         </div>
     </div>
+  
 
+
+     <!-- members 2  -->
+
+     <div class="contents gridmembers"><img class="clix" src="./resources/member2.png" alt="member 2">
+
+        <a href="#modal2" class="btn-open-popups">BIO</a></div>
+
+         
+        <div class="container-all" id="modal2">
+
+            <div class="popups">
+                
+                <div class="img" ><img src="./resources/minibilder2.png" alt="member 2"> </div>
+
+                <div class="container-text"><h4>Roger Smith</h4>
+
+                <p> One of the many Canadian pig-farm-raised magician horn players in the world, Roger has thrilled audiences and mentored students for over twenty-five years. Having recently entered his ninth year touring and recording as solo horn with Brass Ensamble, Roger has also performed concerti with orchestras on six continents, and in the horn sections of dozens of orchestras including the New York and Los Angeles Philharmonics, and the Boston, Chicago, St. Louis, Cincinnati, and Montreal Symphonies.  One thrilling event last summer was performing in Carnegie Hall as guest principal horn with the Philadelphia Orchestra and fellow Canadian, maestro Yannick Nézet-Séguin.</p>
+            
+            </div> 
+
+            <div><a href="#bios" class="btn-close-popups">x</a></div>
+                
+                
+
+    </div>
+</div>
+
+<!-- members 3  -->
+
+<div class="contents gridmembers"><img class="clix" src="./resources/member3.png" alt="member number 3">
+
+    <a href="#modal3" class="btn-open-popups">BIO</a></div>
+
+    <div class="container-all" id="modal3">
+
+        <div class="popups">
+            
+            <div class="img" ><img src="./resources/minibilder3.png" alt="member 3"> </div>
+
+            <div class="container-text"><h4>Maurice Brown</h4>
+
+            <p> Maurice has brought music, imagination and humour to Brass Ensamble since the group was formed in 1970. Playing a key role in all of the group’s ground- breaking projects, world travels and on over 100 recordings, Maurice and his gold-plated & carbon fiber tuba are the bedrock of the massive Canadian Brass repertoire – from Baroque to jazz. Maurice comes from a long line of German and Swiss musicians and, during his upbringing in Wisconsin, his father gave him daily music lessons.
+            As a teenager, Maurice began studies with legendary Chicago Symphony tuba player, Arnold Jacobs and throughout his career whenever possible would stop in to see his mentor, Mr. Jacobs.</p>
+        
+        </div> 
+
+        <div><a href="#bios" class="btn-close-popups">x</a></div>
+            
+            
+
+</div>
+</div>
+
+<!-- members 4  -->
+
+<div class="contents gridmembers"><img class="clix" src="./resources/member4.png" alt="member number 5">
+
+    <a href="#modal4" class="btn-open-popups">BIO</a></div>
+
+     <div class="container-all" id="modal4">
+
+        <div class="popups">
+            
+            <div class="img" ><img src="./resources/minibilder4.png" alt="member 4"> </div>
+
+            <div class="container-text"><h4>Kirby Sartin</h4>
+
+            <p> At the age of twenty, Kirby became the youngest member ever to join the iconic Brass Ensamble, a position he held for seven years. While with the group, he played in distinguished venues around the world, performed on television, recorded ten albums, appeared on NPR’s Tiny Desk, and received three Juno Award nominations. Kirby also created a catalog of new arrangements for the ensemble, which are still performed today.</p>
+        
+        </div> 
+
+        <div><a href="#bios" class="btn-close-popups">x</a></div>
+            
+            
+
+</div>
+</div>
+
+<!-- members 5  -->
+
+<div class="contents gridmembers"><img class="clix" src="./resources/member5.png" alt="member number 5">
+
+    <a href="#modal5" class="btn-open-popups">BIO</a></div>
+
+     <div class="container-all" id="modal5">
+
+        <div class="popups">
+            
+            <div class="img" ><img src="./resources/minibilder5.png" alt="member number 5"> </div>
+
+            <div class="container-text"><h4>Harold Real</h4>
+
+            <p>Harold is a stylistically diverse trumpet soloist, collaborative artist, composer and arranger. Recognized as “…heralding the trumpet of the future” (Chicago Sun Times) and for “demonstrating the trumpet’s huge potential for lyricism” (Cleveland Plain Dealer), Harold has combined his wide-ranging activities as a soloist and chamber musician with his passion for composing and arranging, resulting in his distinctive artistic voice and vision.</p>
+        
+        </div> 
+
+        <div><a href="#bios" class="btn-close-popups">x</a></div>
+      
+    </div>
+</div>
+</div>      
        
-
+</main>
 
 <!--footer -->  
 
 <footer class="borders">
-    
-    <h2>FOLLOW US</h2> <a href=""></a>
 
 <!--social media -->
         
@@ -187,16 +271,12 @@
         </div>
             
            
-    
-    
-
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
 crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 
 
 </body>

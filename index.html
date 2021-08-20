@@ -2,7 +2,8 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+        <meta name="author" content="martinpercussion.com">   
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 
         <!--Favicon -->
@@ -80,11 +81,10 @@
           <header class="header">  
                                         
           <div>                             
-                                                         
-                           
+                          
                               
            <nav class="navbar navbar-expand-lg navbar-dark bg-navbar ">
-            <a class="navbar-brand" href="#"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
+            <a class="navbar-brand" href="/index.html"><img src="resources/brass_ensemble_logo.png" alt="Logo" style="width:75%;"></a>
         
         
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
@@ -96,28 +96,18 @@
             <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
             <li class="nav-item dropdown">
-        
-            <a class="nav-link dropdown-toggle box uno subnav"
-            href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
-            aria-haspopup="true" aria-expanded="false" href="members.html"> members                                     
-            </a>
-        
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="members.html">Amanda Johnson</a> 
-              <a class="dropdown-item" href="members.html">Roger Smith</a> 
-              <a class="dropdown-item" href="members.html">Maurice Brown</a>
-              <a class="dropdown-item" href="members.html">Kirby Sartin</a>  
-              <a class="dropdown-item" href="members.html">Harold Real</a>                                   
-              </div>
-                                            
+
           </li>
-          <a class="nav-link" href="media.html" id="">media <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="members.html">members</a>
+          </li>                                                   
+          </li>
+          <a class="nav-link" href="media.html">media</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="concert_dates.html" id="">concert dates</a>
+          <a class="nav-link" href="concert_dates.html">concert dates</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="press.html" id="">press</a>
+          <a class="nav-link" href="press.html">press</a>
           </li>                 
           </ul>                              
           </nav>
@@ -127,37 +117,41 @@
       <!--main section -->
 
       <main>
-
-     
-        <div class="container-fluid">   
-    <div class="img-fluid" id="intro">
+        <div class="container-fluid">  
+          
+          <div id="intro">
         
-        <div id="main">    
-              
+             <div id="main"> 
+
+               <a href="#bio"><i class="fas fa-angle-double-down icon"></i></a>
+           
+        </div>
          
       <!--main section - arrow down -->
 
-        <span><a href="#members"><i class="fas fa-angle-double-down icon"></i></a></span>    
-        
-        </div>        
 
-    </div>
-    </div>
-    
-    
 
-    <!--main section - band members -->              
+
+<!--main section - bio -->
+
+<div class="biography">
+
+ 
+  <blockquote><div><h3 id="bio" class="bio__text">Brass Ensamble was founded in 1998 as Brass Quintet by Martin Rodriguez.In 2017, to record the CD "Bach 300" (J.S. Bach born 1685) the group was extended to 10 performers. The group is well known as best performing professional brass ensemble all over the world. Brass Ensamble musicians are members of major  Symphony Orchestras and/or are Professors at university schools of music.</h3></div>
+
+  <div><h3 id="bio" class="bio__text">Brass Ensamble is both: tradition and progress. But above all the ensemble has for years been a synonym for brass music at its highest level. A pioneer among brass ensembles; they have co-initiated the brass movement from its beginnings and has influenced it decisively ever since.<a class="readmore" href="members.html">Read more</h3></a></div></blockquote>
+
+
+</div>
+
+<!--main section - band members -->              
    
-    
       <div class="container-fluid">
 
-        <a href="members.html"><h2 id="members">MEMBERS</h2></a>
-        
-
         <div class="row">
-          <div class="col w-100 gridmembers"> <img class="unix" src="./resources/member5.png" alt="member number 5">
+          <div class="col w-100 gridmembers"> <img class="unix" src="./resources/member7.png" alt="member number 1">
             <div class="content 1"><h5>Amanda Johnson</h5><h6>Trumpet</h6></div> 
-            <div class="instrumento trumpet "></div>
+            <div class="instrumento trumpet"></div>
           </div>
 
           <div class="col  w-100 gridmembers"> <img src="./resources/member2.png" alt="member number 2"> 
@@ -181,19 +175,34 @@
           </div>
 
 
-        </div>
+        <!--  Carrousel -->
 
+        <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="7000">
+          <ol class="carousel-indicators">
+            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          </ol>
+          
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <blockquote><p class="critics__text">Massive and yet nimble, even more: lively elegant. The Wachauer brass band Federspiel are highly virtuosic. They serve up a portion of alpine folk music peppered with humour and delicate irony, mix world music and old-austrian sounds in 3/4 time. Zither and music box compliment the brass sounds while a synthesiser provides a breath of fresh air. The septet bubbles over with fantasy, adventurousness, and playfulness. They hum, mumble, whisper, yodel and sing their way to the highest realms. And it all goes down like a good glass of wine… (from the jury: Heinz Zietsch)</p></blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote><p class="critics__text" >It doesn’t even take a minute, then it is over with the Bavarian brass music of the conventional kind. The Unterbiberger Hofmusik has never been fully satisfied with the sounds found in the Alpine country. The expanded family business Himpsl promises oompah music with a lot of drive; in the past it was mainly jazz, but today sounds from the Arab world are also mixed into the traditional movements. What the Unterbiberger bring with them from their trips to other countries can surprise everyone: the domestic and the foreign audience. For the jury: Imke Turner</p></blockquote>
+            </div>
+            <div class="carousel-item">
+              <blockquote> <p class="critics__text" > Felix Meyer made music on the streets of Europe for many years, now he is back to living in Berlin. He makes songs – so he can live with being called a »songwriter«. He named his fifth album in reference to Bertolt Brecht’s famous Mack the Knife-song. Being highly creative with words is his way, as is pondering about the world. He sings of Europe, and proclaims in the piece »Steh auf«: »If you can think it, you can also move it.« That sounds good, yet Meyer himself says: »That’s not true. But: It is a beautiful utopia.« Stylistically, his songs, which he interprets together with a band, are located between chanson, folk, pop and a little bit of jazz. His powerful voice is unmistakable. For the jury: Petra Schwarz</p>
+            </div></blockquote>
+          </div>
+          
         </div>
-
-           
-      </main>
+   
+  </main>
     
     <!--footer -->  
 
     <footer class="borders">
-    
-    <h2>FOLLOW US</h2> <a href=""></a>
-
     <!--social media -->
         
         <div class="iconsfit">
@@ -205,14 +214,13 @@
 
     <!--contact us -->
             
-            <a href="mail to:martin@gmail.com"><i class="fas fa-envelope"></i></a> 
+            <a href="mail to:martin@gmail.com"><i class="fas fa-envelope"></i></a>
 
         </div>
-            
-           
-    
-    
 
+        
+            
+      
 </footer>
 
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
@@ -221,7 +229,5 @@ crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/
 integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
 
-</body>
-    
-
+</body>    
 </html>
