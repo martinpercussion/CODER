@@ -280,7 +280,7 @@ blockquote h3:after {
 
 .popups {
     display: flex;
-    width: -webkit-fill-available;
+    width: 100%;
     height: fit-content;
     position: absolute;
     padding-left: 10%;
@@ -305,6 +305,7 @@ blockquote h3:after {
     width: 60%;
     padding-left: 10%;
     overflow-y: auto;
+    color: $fontColour;
 }
 
 .container-text h4 {
